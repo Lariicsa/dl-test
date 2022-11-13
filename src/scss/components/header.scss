@@ -1,0 +1,13 @@
+.header {
+  background-color: $dark-1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 8.4rem;
+  width: 100%;
+
+  @include from($tablet) {
+    justify-content: space-between;
+    height: 12rem;
+  }
+}
