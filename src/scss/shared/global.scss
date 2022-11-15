@@ -68,11 +68,11 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 1.2rem 0;
     width: 94%;
 
-    @include tablet {
-      padding: 0.8rem;
-      width: 100%;
+    @include from($tablet) {
+      padding: 2.4rem;
     }
   }
   &__inner {
