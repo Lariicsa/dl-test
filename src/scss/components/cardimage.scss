@@ -3,7 +3,6 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  border: 1px dotted $accent-active;
 
   &__image {
     background-repeat: no-repeat;
@@ -58,5 +57,14 @@
     position: absolute;
     right: 1rem;
     bottom: 1rem;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    width: auto;
+    height: auto;
   }
 }

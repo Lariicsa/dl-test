@@ -1,5 +1,6 @@
 <template>
   <div class="container__main">
+    
     <HeaderVue>
       <MenuList :item="topMenu" />
     </HeaderVue>
@@ -7,7 +8,7 @@
       <GridVue
         columns="1fr 1fr 1fr"
         columnGap="1.6rem"
-        columnRow="1.6rem"
+        columnRow="5.6rem"
         :breakPointTablet="breakPointTablet"
         colsForTablet="1fr 1fr 1fr"
         :breakPointMobile="breakPointMobile"

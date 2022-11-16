@@ -10,15 +10,19 @@
     </div>
     <div class="cardimage__description">{{ item.description }}</div>
     <div class="cardimage__tags">
-      <div v-for="tag in item.tags" :key="tag" class="cardimage__tag">
-        {{ tag }}
-      </div>
+      <TagVue v-for="tag in item.tags" :key="tag" :text="tag" />
     </div>
   </div>
 </template>
 <script>
+import TagVue from "@/components/Tag";
+
 export default {
   name: "CardImage",
+
+  components: {
+    TagVue,
+  },
 
   props: {
     item: {
