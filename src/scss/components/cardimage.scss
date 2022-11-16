@@ -1,3 +1,62 @@
-.cardimage{
-  
+.cardimage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border: 1px dotted $accent-active;
+
+  &__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 27rem;
+    width: 100%;
+    position: relative;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    margin: 1.6rem 0;
+    font-size: $smal-font-size;
+    color: $light-1;
+    height: auto;
+    width: 100%;
+  }
+
+  &__quality {
+    background-color: rgba($dark-1, 0.4);
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $light-1;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 5.8rem;
+    height: 4rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  &__duration {
+    background-color: rgba($dark-1, 0.4);
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $light-1;
+    font-size: 12px;
+    font-weight: 400;
+    width: 5rem;
+    height: 2.2rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
