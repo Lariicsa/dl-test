@@ -5,6 +5,7 @@
       :style="`background-image: url(${item.image})`"
       :class="{ isnew: item.isNew }"
     >
+      <div class="cardimage__play"></div>
       <span class="cardimage__quality">{{ item.quality }}</span>
       <span class="cardimage__duration">{{ item.duration }} min</span>
     </div>
