@@ -20,7 +20,7 @@
             columnGap="1.6rem"
             columnRow="5.6rem"
             :breakPointTablet="breakPointTablet"
-            colsForTablet="1fr 1fr 1fr"
+            colsForTablet="1fr 1fr"
             :breakPointMobile="breakPointMobile"
             colsForMobile="100%"
             margin="0"
@@ -58,8 +58,8 @@ export default {
         { name: "faqs", link: "#" },
       ],
 
-      breakPointTablet: 1200,
-      breakPointMobile: 860,
+      breakPointTablet: 1280,
+      breakPointMobile: 1024,
       cardsData: DATA.cardsData,
       positions: DATA.positionsData,
     };

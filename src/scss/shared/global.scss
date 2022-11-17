@@ -85,8 +85,11 @@ h3 {
   }
   &__inner {
     @extend .container;
-    //max-width: $maxwidth-inner-containner;
     width: calc(100% - 20rem);
+    @include tablet{
+     width: 100%;
+    }
+   
   }
 }
 
