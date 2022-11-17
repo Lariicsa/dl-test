@@ -1,21 +1,34 @@
 <template>
-  <div class="container__main">
-    
+  <div class="container__out">
     <HeaderVue>
       <MenuList :item="topMenu" />
     </HeaderVue>
-    <div class="row">
-      <GridVue
-        columns="1fr 1fr 1fr"
-        columnGap="1.6rem"
-        columnRow="5.6rem"
-        :breakPointTablet="breakPointTablet"
-        colsForTablet="1fr 1fr 1fr"
-        :breakPointMobile="breakPointMobile"
-        colsForMobile="100%"
-      >
-        <CardImage v-for="item in cardsData" :item="item" :key="item.id" />
-      </GridVue>
+    <div class="container__main">
+      <div class="sidebar">
+        <MenuList
+          :item="formattedPositions"
+          :isVertical="true"
+          :hasTotal="true"
+        />
+      </div>
+
+      <div class="container__inner">
+        <div class="row">
+          <h2>Latest updates</h2>
+          <GridVue
+            columns="1fr 1fr 1fr"
+            columnGap="1.6rem"
+            columnRow="5.6rem"
+            :breakPointTablet="breakPointTablet"
+            colsForTablet="1fr 1fr 1fr"
+            :breakPointMobile="breakPointMobile"
+            colsForMobile="100%"
+            margin="0"
+          >
+            <CardImage v-for="item in cardsData" :item="item" :key="item.id" />
+          </GridVue>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -48,7 +61,18 @@ export default {
       breakPointTablet: 1200,
       breakPointMobile: 860,
       cardsData: DATA.cardsData,
+      positions: DATA.positionsData,
     };
+  },
+
+  computed: {
+    formattedPositions() {
+      const ALL = this.positions.map((ele) => {
+        return { ...ele, total: `(${ele.total})` };
+      });
+
+      return ALL;
+    },
   },
 };
 </script>

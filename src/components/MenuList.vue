@@ -1,8 +1,19 @@
 <template>
-  <div class="menulist__wrapper">
-    <ul class="menulist" :class="isVertical">
+  <div class="menulist__wrapper" :class="{ vertical: isVertical }">
+    <ul class="menulist" :class="{ vertical: isVertical }">
       <li class="menulist__item" v-for="item in item" :key="item.id">
-        <router-link class="menulist__link" :to="item.link">{{ item.name }}</router-link>
+        <router-link
+          class="menulist__link"
+          :class="{ vertical: isVertical }"
+          :to="item.link"
+          >{{ item.name }}
+        </router-link>
+        <span
+          v-if="hasTotal"
+          class="menulist__total"
+          :class="{ vertical: isVertical }"
+          >{{ item.total }}</span
+        >
       </li>
     </ul>
   </div>
@@ -16,6 +27,10 @@ export default {
       type: Array,
     },
     isVertical: {
+      type: Boolean,
+      default: false,
+    },
+    hasTotal: {
       type: Boolean,
       default: false,
     },

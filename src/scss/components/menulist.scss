@@ -8,7 +8,7 @@
   width: auto;
   list-style-type: none;
   @include from($tablet) {
-   justify-content: flex-end;
+    justify-content: flex-end;
   }
 
   &__item {
@@ -39,6 +39,26 @@
     text-decoration: none;
     height: 100%;
     width: 100%;
+    &.vertical {
+      text-decoration: underline;
+      text-transform: none;
+      font-size: 2rem;
+      color: $primary-2;
+      font-weight: 400;
+      margin: 0.8rem 0;
+      &:hover{
+        color: $accent-hover;
+      }
+    }
+  }
+
+  &__total {
+    &.vertical {
+      font-size: 2rem;
+      color: $light-1;
+      text-decoration: none;
+      margin-left: 0.8rem;
+    }
   }
 
   &__wrapper {
@@ -47,5 +67,15 @@
     justify-content: flex-start;
     width: auto;
     height: 100%;
+    &.vertical {
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }

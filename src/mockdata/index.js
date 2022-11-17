@@ -310,4 +310,244 @@ export default {
       isNew: false,
     },
   ],
+
+  positionsData: [
+    {
+      id: "pos01",
+      name: "Anal",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos02",
+      name: "Anal Creampie",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos03",
+      name: "Ass Licking",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos04",
+      name: "Ass Smacking",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos05",
+      name: "Ball Licking",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos06",
+      name: "big dick",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos07",
+      name: "blow job",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos08",
+      name: "bubble butt",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos09",
+      name: "cum in mouth",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos10",
+      name: "cum on ass",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos11",
+      name: "cum on feeth",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos12",
+      name: "cum on glasses",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos13",
+      name: "cum on pussy",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos14",
+      name: "cum on stomach",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos15",
+      name: "cum on tits",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos16",
+      name: "cum swapping",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos17",
+      name: "deepthroating",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos18",
+      name: "dominating",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos19",
+      name: "double penetretion",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos20",
+      name: "facial",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos21",
+      name: "foot fetish",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos22",
+      name: "foursome",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos23",
+      name: "fuck my ass",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos24",
+      name: "girl on girl",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos25",
+      name: "group sex",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos26",
+      name: "hand job",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos27",
+      name: "masturbation",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos28",
+      name: "oil",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos29",
+      name: "orgasm",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos30",
+      name: "public place",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos31",
+      name: "role playing",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos32",
+      name: "shower",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos33",
+      name: "srping break",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos34",
+      name: "squirting",
+      total: 12,
+      link: "#",
+    },
+
+    {
+      id: "pos35",
+      name: "stockings",
+      total: 3,
+      link: "#",
+    },
+    {
+      id: "pos36",
+      name: "submissive",
+      total: 7,
+      link: "#",
+    },
+    {
+      id: "pos37",
+      name: "swalloging",
+      total: 4,
+      link: "#",
+    },
+    {
+      id: "pos38",
+      name: "voyeur",
+      total: 12,
+      link: "#",
+    },
+  ],
 };

@@ -16,7 +16,7 @@ body {
 * {
   box-sizing: border-box;
   font-size: $smal-font-size;
-  color: $dark-1;
+  color: $light-1;
 }
 
 h1,
@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: $big-title-size;
+  font-size: $regular-title-size;
   line-height: $big-title-size;
   font-weight: $regular;
 }
@@ -63,7 +63,7 @@ h3 {
   @include until(1420px) {
     overflow: hidden;
   }
-  &__main {
+  &__out {
     @extend .container;
     flex-direction: column;
     justify-content: space-between;
@@ -76,12 +76,17 @@ h3 {
       padding: 2.4rem;
     }
   }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+  }
   &__inner {
     @extend .container;
-    max-width: $maxwidth-inner-containner;
-    @include until(1280px){
-      padding: 0 1.6rem;
-    }
+    //max-width: $maxwidth-inner-containner;
+    width: calc(100% - 20rem);
   }
 }
 
@@ -149,6 +154,10 @@ h3 {
   &.sm {
     width: 32.666%;
   }
+}
+
+.sidebar {
+  width: 21.8rem;
 }
 
 [v-cloak] {
