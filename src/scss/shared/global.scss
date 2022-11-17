@@ -86,10 +86,9 @@ h3 {
   &__inner {
     @extend .container;
     width: calc(100% - 20rem);
-    @include tablet{
-     width: 100%;
+    @include tablet {
+      width: 100%;
     }
-   
   }
 }
 
@@ -157,10 +156,6 @@ h3 {
   &.sm {
     width: 32.666%;
   }
-}
-
-.sidebar {
-  width: 21.8rem;
 }
 
 [v-cloak] {
