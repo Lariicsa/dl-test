@@ -1,0 +1,162 @@
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+//icons
+@mixin icon($name, $color) {
+  text-indent: -9000px;
+  background-repeat: no-repeat;
+  $string: #{$color};
+  $varcolor: str-replace($string, "#", "%23");
+
+  @if ($name == "instagram") {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48.198' height='48.207' viewBox='0 0 48.198 48.207'%3E%3Cg data-name='Grupo 1' transform='translate(-55 -385.335)'%3E%3Cpath data-name='Trazado 1' d='M48.525,14.173A17.615,17.615,0,0,0,47.4,8.325,12.349,12.349,0,0,0,40.35,1.271,17.66,17.66,0,0,0,34.5.151C31.922.028,31.1,0,24.558,0s-7.364.028-9.935.141A17.62,17.62,0,0,0,8.774,1.262,11.762,11.762,0,0,0,4.5,4.049,11.869,11.869,0,0,0,1.721,8.316,17.662,17.662,0,0,0,.6,14.163c-.122,2.581-.151,3.4-.151,9.945s.028,7.364.141,9.935a17.614,17.614,0,0,0,1.121,5.848,12.347,12.347,0,0,0,7.053,7.053,17.663,17.663,0,0,0,5.848,1.121c2.571.113,3.39.141,9.935.141s7.364-.028,9.935-.141a17.61,17.61,0,0,0,5.848-1.121,12.33,12.33,0,0,0,7.054-7.053,17.674,17.674,0,0,0,1.121-5.848c.113-2.571.141-3.39.141-9.935S48.637,16.744,48.525,14.173ZM44.183,33.855a13.213,13.213,0,0,1-.829,4.473,8,8,0,0,1-4.577,4.577,13.26,13.26,0,0,1-4.473.828c-2.543.113-3.305.141-9.737.141s-7.2-.028-9.738-.141a13.206,13.206,0,0,1-4.473-.828,7.418,7.418,0,0,1-2.769-1.8,7.5,7.5,0,0,1-1.8-2.769,13.262,13.262,0,0,1-.828-4.473c-.113-2.543-.141-3.306-.141-9.738s.028-7.2.141-9.737a13.206,13.206,0,0,1,.828-4.473A7.327,7.327,0,0,1,7.6,7.148a7.483,7.483,0,0,1,2.769-1.8,13.269,13.269,0,0,1,4.473-.829c2.543-.113,3.306-.141,9.737-.141s7.2.028,9.738.141a13.213,13.213,0,0,1,4.473.829,7.413,7.413,0,0,1,2.769,1.8,7.493,7.493,0,0,1,1.8,2.769,13.267,13.267,0,0,1,.829,4.473c.113,2.543.141,3.305.141,9.737S44.3,31.313,44.183,33.855Zm0,0' transform='translate(54.551 385.335)' fill='" + $varcolor + "'/%3E%3Cpath data-name='Trazado 2' d='M137.333,124.5a12.384,12.384,0,1,0,12.384,12.384A12.387,12.387,0,0,0,137.333,124.5Zm0,20.417a8.033,8.033,0,1,1,8.033-8.033A8.034,8.034,0,0,1,137.333,144.917Zm0,0' transform='translate(-58.225 272.56)' fill='" + $varcolor + "'/%3E%3Cpath data-name='Trazado 3' d='M368.232,91.493A2.891,2.891,0,1,1,365.34,88.6,2.891,2.891,0,0,1,368.232,91.493Zm0,0' transform='translate(-273.359 305.077)' fill='" + $varcolor + "'/%3E%3C/g%3E%3C/svg%3E%0A");
+  } @else if($name == "twitter") {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2859 0C10.1821 0 8.47659 1.79086 8.47659 4C8.47659 4.33382 8.51553 4.65809 8.58891 4.96808C6.56599 4.96808 3.51902 4.55908 0.974316 2.00961C0.635933 1.67059 0.0119625 1.89726 0.0354339 2.37567C0.412559 10.0627 3.70465 12.3049 5.39998 12.4444C4.30523 13.5257 2.71498 14.3791 1.11477 14.7622C0.692441 14.8633 0.588114 15.3256 1.00108 15.4599C2.14611 15.8323 3.78504 15.9758 4.66723 16C10.9081 16 15.9805 10.7471 16.0934 4.22229C16.9127 3.68945 17.4376 2.5325 17.7325 1.71291C17.8043 1.5133 17.4772 1.28073 17.2813 1.36226C16.6693 1.61708 15.8922 1.67749 15.2303 1.46181C14.5316 0.569266 13.4721 0 12.2859 0Z' fill='" + $varcolor + "' /%3E%3C/svg%3E");
+  } @else if($name == "burger") {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='15' viewBox='0 0 25 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='13.6364' width='24.5455' height='1.36364' fill='" + $varcolor + "'/%3E%3Crect y='6.81818' width='24.5455' height='1.36364' fill='" + $varcolor + "'/%3E%3Crect width='24.5455' height='1.36364' fill='" + $varcolor + "'/%3E%3C/svg%3E%0A");
+  } @else if($name == "plus") {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15ZM8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16Z' fill='" + $varcolor + "'/%3E%3Cpath d='M8 4C8.13261 4 8.25979 4.05268 8.35355 4.14645C8.44732 4.24021 8.5 4.36739 8.5 4.5V7.5H11.5C11.6326 7.5 11.7598 7.55268 11.8536 7.64645C11.9473 7.74021 12 7.86739 12 8C12 8.13261 11.9473 8.25979 11.8536 8.35355C11.7598 8.44732 11.6326 8.5 11.5 8.5H8.5V11.5C8.5 11.6326 8.44732 11.7598 8.35355 11.8536C8.25979 11.9473 8.13261 12 8 12C7.86739 12 7.74021 11.9473 7.64645 11.8536C7.55268 11.7598 7.5 11.6326 7.5 11.5V8.5H4.5C4.36739 8.5 4.24021 8.44732 4.14645 8.35355C4.05268 8.25979 4 8.13261 4 8C4 7.86739 4.05268 7.74021 4.14645 7.64645C4.24021 7.55268 4.36739 7.5 4.5 7.5H7.5V4.5C7.5 4.36739 7.55268 4.24021 7.64645 4.14645C7.74021 4.05268 7.86739 4 8 4Z' fill='" + $varcolor + "'/%3E%3C/svg%3E%0A");
+  } @else if($name == "triangle"){
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='35' viewBox='0 0 34 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.751587 34.5882V0.411743L33.3006 17.5L0.751587 34.5882Z' fill='" + $varcolor + "'/%3E%3C/svg%3E%0A");
+  }
+}
+
+//font-face
+@mixin font-face(
+  $name,
+  $path,
+  $weight: null,
+  $style: null,
+  $exts: eot woff2 woff ttf svg
+) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_"),
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
+
+  @each $ext in $exts {
+    $extmod: if(
+      map-has-key($extmods, $ext),
+      $ext + map-get($extmods, $ext),
+      $ext
+    );
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append(
+      $src,
+      url(quote($path + "." + $extmod)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin button($width, $type) {
+  border: 0.2rem solid transparent;
+  border-radius: $radius + 0.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  font-size: $regular-font-size;
+  font-weight: $regular;
+  text-decoration: none;
+  height: 4.8rem;
+  width: $width;
+  position: relative;
+  transition: box-shadow 0.25s ease-out, background-color 0.2s ease-out;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @if ($type == "primary") {
+    background: $accent;
+    border: none;
+    color: $light-1;
+    &:hover {
+      background-color: $accent-hover;
+    }
+    &:active {
+      background-color: $accent-active;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//responsive
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin until($device) {
+  @media screen and (max-width: $device - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-m {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: ($tablet - 1px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: ($mobile - 1px)) {
+    @content;
+  }
+}
+
+@mixin lowmobile {
+  @media screen and (max-width: $mobile-low) {
+    @content;
+  }
+}
+
+@mixin between($min, $max) {
+  @media screen and (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}

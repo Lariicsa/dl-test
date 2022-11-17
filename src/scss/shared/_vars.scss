@@ -1,0 +1,51 @@
+//Font
+$bold: 700;
+$semibold: 500;
+$regular: 400;
+$font-primary: "Proxima Nova", -apple-system, Helvetica, Roboto, Arial,
+  sans-serif;
+
+//Font-size
+$regular-font-size: 1.6rem;
+$smal-font-size: 1.4rem;
+$big-font-size: 1.8rem;
+$small-title-size: 2.4rem;
+$regular-title-size: 4rem;
+$big-title-size: 4.6rem;
+
+//Colors
+$primary-1: #FFD557;
+$primary-2: #FFECB4;
+
+$secondary: #3483fa;
+$dark-1: #000000;
+$dark-2: #141414;
+$dark-3: #353535;
+$dark-4: #8A8A8A;
+
+$light-1: #ffffff;
+$light-2: #E5E5E5;
+
+$accent-hover: #f8c93c;
+$accent-active: #d9b342;
+
+//Larges
+$large: 100%;
+$medium: 48%;
+$small: 31%;
+$maxwidth-containner: 1640px;
+$maxwidth-inner-containner: 1200px;
+
+//Breakpoints
+$mobile-low: 320px !default;
+$mobile: 580px !default;
+$tablet: 760px !default;
+$desktop: 1280px !default;
+
+//RYTHMS
+$global-rythm: 0.8rem;
+$global-padding: 0 1.6rem;
+$global-padding-mobile: 0 1.6rem;
+
+//Box
+$radius: 0.4rem;

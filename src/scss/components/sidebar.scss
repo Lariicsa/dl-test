@@ -1,0 +1,10 @@
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 26rem;
+
+  @include tablet{
+    display: none;
+  }
+}

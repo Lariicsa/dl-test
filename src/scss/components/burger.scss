@@ -1,0 +1,15 @@
+.burger {
+  @include icon("burger", $light-1);
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4.4rem 0 0;
+  height: 1.6rem;
+  width: 2.4rem;
+
+  @include from($tablet) {
+    display: none;
+  }
+}

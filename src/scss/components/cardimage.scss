@@ -1,0 +1,102 @@
+.cardimage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  &__description {
+    display: flex;
+    align-items: center;
+    margin: 1.6rem 0;
+    font-size: $smal-font-size;
+    color: $light-1;
+    height: 3.2rem;
+    width: 100%;
+  }
+
+  &__quality {
+    background-color: rgba($dark-1, 0.4);
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $light-1;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 5.8rem;
+    height: 4rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  &__duration {
+    background-color: rgba($dark-1, 0.4);
+    border-radius: $radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $light-1;
+    font-size: 12px;
+    font-weight: 400;
+    width: 5rem;
+    height: 2.2rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    width: auto;
+    height: auto;
+  }
+
+  &__play {
+    background-color: rgba($dark-1, 0.30);
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: -2.4rem 0 0 -2.4rem;
+    width: 8.4rem;
+    height: 8.4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+
+    &::before {
+      content: "";
+      @include icon("triangle", $light-1);
+      background-position: center;
+      background-size: contain;
+      width: 3.2rem;
+      height: 3.4rem;
+    }
+
+    &__hover{
+      background-color: rgba($dark-1, 0.40);
+    }
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 27rem;
+    width: 100%;
+    position: relative;
+
+    &:hover .cardimage__play {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}
