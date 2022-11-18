@@ -15,6 +15,7 @@
           >{{ item.total }}</span
         >
       </li>
+      <slot></slot>
     </ul>
   </div>
 </template>
