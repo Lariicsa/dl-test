@@ -1,7 +1,7 @@
 <template>
   <div class="container__out">
     <HeaderVue>
-      <MenuList :item="topMenu" />
+      <MenuList :item="topMenu"> <ButtonVue buttonClass="primary">SINC NOW</ButtonVue></MenuList>
     </HeaderVue>
     <div class="container__main">
       <div class="sidebar">
@@ -34,8 +34,8 @@
 </template>
 
 <script>
+import ButtonVue from "@/components/Button";
 import CardImage from "@/components/CardImage";
-
 import GridVue from "@/components/Grid";
 import HeaderVue from "@/components/Header";
 import MenuList from "@/components/MenuList";
@@ -44,6 +44,7 @@ export default {
   name: "HomeView",
 
   components: {
+    ButtonVue,
     CardImage,
     GridVue,
     HeaderVue,
