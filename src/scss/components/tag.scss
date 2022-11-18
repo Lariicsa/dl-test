@@ -12,7 +12,11 @@
   width: auto;
   height: auto;
 
-  &:first-child{
+  &:first-child {
     margin-left: 0;
+  }
+
+  @include until(1520px) {
+    padding: 0.6rem;
   }
 }

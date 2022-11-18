@@ -35,6 +35,7 @@
 
 <script>
 import CardImage from "@/components/CardImage";
+
 import GridVue from "@/components/Grid";
 import HeaderVue from "@/components/Header";
 import MenuList from "@/components/MenuList";

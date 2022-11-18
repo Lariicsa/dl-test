@@ -1,7 +1,7 @@
 <template>
   <div class="menulist__wrapper" :class="{ vertical: isVertical }">
     <ul class="menulist" :class="{ vertical: isVertical }">
-      <li class="menulist__item" v-for="item in item" :key="item.id">
+      <li class="menulist__item" :class="{ vertical: isVertical }" v-for="item in item" :key="item.id">
         <router-link
           class="menulist__link"
           :class="{ vertical: isVertical }"
@@ -15,6 +15,7 @@
           >{{ item.total }}</span
         >
       </li>
+      <slot></slot>
     </ul>
   </div>
 </template>
