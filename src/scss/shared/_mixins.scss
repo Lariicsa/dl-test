@@ -75,43 +75,6 @@
   }
 }
 
-@mixin button($width, $type) {
-  border: none;
-  border-radius: $radius + 0.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 2.6rem;
-  font-family: $font-primary;
-  font-size: 2.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  height: 4.2rem;
-  width: $width;
-  position: relative;
-  transition: box-shadow 0.25s ease-out, background-color 0.2s ease-out;
-
-  &:hover {
-    background-color: $accent-hover;
-  }
-  &:active {
-    background-color: $accent-active;
-  }
-
-  @if ($type == "default") {
-    background-color: $primary-1;
-    color: $dark-1;
-  } @else if($type == "secondary") {
-    background-color: $primary-2;
-    color: $dark-1;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 //responsive
 @mixin desktop {
@@ -160,3 +123,40 @@
     @content;
   }
 }
+
+@mixin button($width, $type) {
+  border: none;
+  border-radius: $radius + 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2.6rem;
+  font-family: $font-primary;
+  font-weight: 500;
+  text-decoration: none;
+  width: $width;
+  position: relative;
+  transition: box-shadow 0.25s ease-out, background-color 0.2s ease-out;
+
+  &:hover {
+    background-color: $accent-hover;
+  }
+  &:active {
+    background-color: $accent-active;
+  }
+
+  @if ($type == "default") {
+    background-color: $primary-1;
+    color: $dark-1;
+  } @else if($type == "secondary") {
+    background-color: $primary-2;
+    color: $dark-1;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
