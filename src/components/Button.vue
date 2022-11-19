@@ -13,11 +13,11 @@ export default {
   name: "ButtonView",
 
   props: {
-    type: {
+    buttonClass: {
       type: String,
       default: "default",
       validator(v) {
-        return ["default", "primary"].includes(v);
+        return ["default", "secondary"].includes(v);
       },
     },
 
@@ -30,12 +30,6 @@ export default {
   methods: {
     click() {
       this.$emit("click");
-    },
-  },
-
-  computed: {
-    buttonClass() {
-      return this.type;
     },
   },
 };

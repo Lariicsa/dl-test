@@ -1,7 +1,7 @@
 <template>
   <div class="container__out">
     <HeaderVue>
-      <MenuList :item="topMenu"> <ButtonVue buttonClass="primary">SINC NOW</ButtonVue></MenuList>
+      <MenuList :item="topMenu"> <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList>
     </HeaderVue>
     <div class="container__main">
       <div class="sidebar">
@@ -72,7 +72,6 @@ export default {
       const ALL = this.positions.map((ele) => {
         return { ...ele, total: `(${ele.total})` };
       });
-
       return ALL;
     },
   },

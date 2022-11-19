@@ -8,10 +8,59 @@
   height: 33.6rem;
   width: 100%;
   &__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5.6rem 1.6rem;
+    width: 100%;
+    height: auto;
     &-group {
+      border-right: 0.1rem solid $dark-4;
       & > p {
         color: $light-2;
       }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin: 2.4rem 0 0 0;
+    width: 6rem;
+    height: 2rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: auto;
+    max-width: 24rem;
+    line-height: 3rem;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-height: 14rem;
+    list-style-type: none;
+    &-item {
+      display: inline-block;
+      width: auto;
+    }
+    &-link {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 1.6rem;
+      color: $light-2;
+      line-height: 3rem;
     }
   }
 }

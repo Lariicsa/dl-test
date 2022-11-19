@@ -1,13 +1,16 @@
-.button{
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 3rem;
-  width: auto;
-  height: 4.4rem;
+  height: 4.2rem;
 
-  &__default{
+  &__default {
     @extend .button;
-    @include button(17.6rem, 'default');
+    @include button(17.6rem, "default");
+  }
+  &__secondary {
+    @extend .button;
+    @include button(17.6rem, "secondary");
   }
 }
