@@ -11,8 +11,8 @@
         <ul class="footer__menu">
           <li
             class="footer__menu-item"
-            v-for="detail in secondFooterDetails"
-            :key="detail.link"
+            v-for="(detail, $ix) in secondFooterDetails"
+            :key="$ix"
           >
             <router-link class="footer__menu-link" :to="detail.link">{{
               detail.name
