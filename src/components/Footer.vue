@@ -4,21 +4,23 @@
       <MenuList :item="footerTopMenu" />
     </div>
     <div class="footer__bottom">
-      <div class="footer__bottom-group">
-        <div class="col" v-html="firstFooterDetails"></div>
+      <div class="footer__bottom-group first">
+        <div class="footer__simple" v-html="firstFooterDetails"></div>
       </div>
-      <div class="footer__bottom-group">
+      <div class="footer__bottom-group second">
         <ul class="footer__menu">
           <li
             class="footer__menu-item"
             v-for="detail in secondFooterDetails"
             :key="detail.link"
           >
-            <router-link class="footer__menu-link" :to="detail.link">{{ detail.name }}</router-link>
+            <router-link class="footer__menu-link" :to="detail.link">{{
+              detail.name
+            }}</router-link>
           </li>
         </ul>
       </div>
-      <div class="footer__bottom-group">
+      <div class="footer__bottom-group third">
         <slot></slot>
       </div>
     </div>

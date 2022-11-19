@@ -48,7 +48,7 @@ export default {
       <div class="footer__text">
         © 2022 La Touraine, Inc.
        <a href="#">18 USC 2257 Record-Keeping Requirements Compliance Statement</a>
-       <div class="row"><a href="#">Provacy Policy</a> |  <a href="#">Terms of Servce</a></div>
+       <div class="row between"><a href="#">Provacy Policy</a> |  <a href="#">Terms of Servce</a></div>
        <img src="assets/logo-rta.png"  class="footer__logo"/></div>
        `;
     },
