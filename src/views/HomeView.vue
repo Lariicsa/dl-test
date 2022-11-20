@@ -1,7 +1,9 @@
 <template>
   <div class="container__out">
-    <HeaderVue>
-      <MenuList :item="topMenu"> <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList>
+    <HeaderVue @activeBurgerButton="openMenu">
+      <MenuList :item="topMenu">
+        <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList
+      >
     </HeaderVue>
     <div class="container__main">
       <div class="sidebar">
@@ -67,7 +69,14 @@ export default {
       breakPointMobile: 1024,
       cardsData: DATA.cardsData,
       positions: DATA.positionsData,
+
     };
+  },
+
+  methods: {
+    openMenu() {
+      console.log("clic");
+    },
   },
 
   computed: {

@@ -5,16 +5,15 @@
 export default {
   name: "BurgerVue",
 
-  props: {
-    isActive: {
-      type: Boolean,
-      default: false,
-    },
+  data() {
+    return {
+      isActive: false,
+    };
   },
 
   methods: {
     clickburger() {
-      this.$emit("clickburger");
+      this.isActive = !this.isActive;
     },
   },
 };
