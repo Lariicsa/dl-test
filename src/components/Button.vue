@@ -17,7 +17,7 @@ export default {
       type: String,
       default: "default",
       validator(v) {
-        return ["default", "secondary"].includes(v);
+        return ["default", "secondary", "dropdown"].includes(v);
       },
     },
 
