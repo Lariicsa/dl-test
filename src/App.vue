@@ -31,6 +31,8 @@ export default {
         { name: "devices", link: "#" },
         { name: "faqs", link: "#" },
         { name: "news", link: "#" },
+        { name: "ig", link: "#" },
+        { name: "fb", link: "#" },
       ],
 
       secondFooterDetails: [

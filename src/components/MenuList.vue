@@ -7,12 +7,18 @@
         v-for="item in item"
         :key="item.id"
       >
-        <router-link class="menulist__link" :class="typeOfMenu" :to="item.link"
+        <router-link
+          class="menulist__link"
+          :class="typeOfMenu"
+          :to="item.link"
           >{{ item.name }}
         </router-link>
-        <span v-if="hasTotal" class="menulist__total" :class="typeOfMenu">{{
-          item.total
-        }}</span>
+        <span
+          v-if="hasTotal"
+          class="menulist__total"
+          :class="typeOfMenu"
+          >{{ item.total }}</span
+        >
       </li>
       <slot></slot>
     </ul>

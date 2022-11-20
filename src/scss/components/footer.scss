@@ -90,12 +90,11 @@
     &-item {
       display: inline-block;
       width: auto;
-      &:nth-child(4){
+      &:nth-child(4) {
         @include until(1024px) {
           display: none;
         }
       }
-
     }
     &-link {
       display: flex;
@@ -119,6 +118,77 @@
     @include until(1024px) {
       align-items: center;
       text-align: center;
+    }
+  }
+
+  &__topmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+
+    @include from($tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: auto;
+    height: auto;
+
+    @include from($tablet) {
+      margin: 0 2.4rem 0 0;
+    }
+
+    &.net {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      &.ig {
+        @include icon("instagram", $light-1);
+        background-size: contain;
+        margin: 0 0 2.4rem 0;
+        @include from($tablet) {
+          margin: 0 2.4rem 0 0;
+        }
+      }
+      &.fb {
+        @include icon("twitter", $light-1);
+        background-size: contain;
+        @include from($tablet) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: $font-primary;
+    font-weight: 600;
+    color: $light-1;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    margin: 1.2rem 0;
+
+    &:hover {
+      @include from($tablet) {
+        color: $primary-2;
+      }
     }
   }
 }

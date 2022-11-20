@@ -1,7 +1,18 @@
 <template>
   <footer class="footer">
     <div class="footer__top">
-      <MenuList :item="footerTopMenu" />
+      <ul class="footer__topmenu">
+        <li
+          class="footer__item"
+          v-for="(link, i) in footerTopMenu"
+          :class="isNet(link.name)"
+          :key="i * 0.34"
+        >
+          <router-link class="footer__link" :to="link.link">
+            {{ showName(link.name) }}
+          </router-link>
+        </li>
+      </ul>
     </div>
     <div class="footer__bottom">
       <div class="footer__bottom-group first">
@@ -27,13 +38,8 @@
   </footer>
 </template>
 <script>
-import MenuList from "@/components/MenuList";
 export default {
   name: "FooterView",
-
-  components: {
-    MenuList,
-  },
 
   props: {
     footerTopMenu: {
@@ -44,6 +50,26 @@ export default {
     },
     secondFooterDetails: {
       type: Array,
+    },
+  },
+
+  computed: {
+    isNet() {
+      return (type) => {
+        if (type === "fb" || type === "ig") {
+          return `net ${type} `;
+        }
+      };
+    },
+
+    showName() {
+      return (type) => {
+        if (type === "fb" || type === "ig") {
+          return "";
+        } else {
+          return type;
+        }
+      };
     },
   },
 };
