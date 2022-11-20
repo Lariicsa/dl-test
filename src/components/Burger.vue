@@ -13,6 +13,7 @@ export default {
 
   methods: {
     clickburger() {
+      this.isActive = !this.isActive;
       this.$emit("clickburger");
     },
   },

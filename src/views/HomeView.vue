@@ -1,13 +1,11 @@
 <template>
-  <div
-    class="container__out"
-    :style="`display:${isOpenMenu ? 'flex' : 'none'}`"
-  >
+  <div class="container__out">
     <HeaderVue @activeBurgerButton="openMenu">
       <MenuList :item="topMenu">
         <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList
       >
       <MenuList
+        :style="`display:${isOpenMenu ? 'flex' : 'none'}`"
         :item="formattedPositions"
         typeOfMenu="mobile"
         :hasTotal="true"
@@ -77,7 +75,7 @@ export default {
       breakPointMobile: 1024,
       cardsData: DATA.cardsData,
       positions: DATA.positionsData,
-      isOpenMenu: true,
+      isOpenMenu: false,
     };
   },
 
