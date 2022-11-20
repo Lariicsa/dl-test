@@ -5,8 +5,8 @@
       :style="`background-image: url(${
         item.image != undefined ? item.imag : ''
       })`"
-      :class="{ isnew: item.isNew }"
     >
+      <span v-if="item.isNew" class="cardimage__ribbon">New</span>
       <div class="cardimage__play"></div>
       <span class="cardimage__quality">{{ item.quality }}</span>
       <span class="cardimage__duration">{{ item.duration }} min</span>

@@ -83,6 +83,10 @@
     &__hover {
       background-color: rgba($dark-1, 0.4);
     }
+
+    @include tablet {
+      display: flex;
+    }
   }
 
   &__image {
@@ -93,10 +97,26 @@
     height: 27rem;
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     &:hover .cardimage__play {
       display: flex;
       cursor: pointer;
     }
+  }
+
+  &__ribbon {
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 13rem;
+    height: 2.8rem;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 1.8rem;
+    left: -3rem;
   }
 }
