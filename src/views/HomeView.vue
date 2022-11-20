@@ -1,15 +1,23 @@
 <template>
-  <div class="container__out">
+  <div
+    class="container__out"
+    :style="`display:${isOpenMenu ? 'flex' : 'none'}`"
+  >
     <HeaderVue @activeBurgerButton="openMenu">
       <MenuList :item="topMenu">
         <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList
       >
+      <MenuList
+        :item="formattedPositions"
+        typeOfMenu="mobile"
+        :hasTotal="true"
+      />
     </HeaderVue>
     <div class="container__main">
-      <div class="sidebar" :style="`display:${isOpenMenu ? 'flex' : 'none'}`">
+      <div class="sidebar">
         <MenuList
           :item="formattedPositions"
-          :isVertical="true"
+          typeOfMenu="vertical"
           :hasTotal="true"
         />
       </div>
@@ -69,14 +77,14 @@ export default {
       breakPointMobile: 1024,
       cardsData: DATA.cardsData,
       positions: DATA.positionsData,
-      isOpenMenu: false,
+      isOpenMenu: true,
     };
   },
 
   methods: {
     openMenu() {
       this.isOpenMenu = !this.isOpenMenu;
-      console.log('clic');
+      console.log("clic");
     },
   },
 

@@ -1,19 +1,18 @@
 <template>
-  <div class="menulist__wrapper" :class="{ vertical: isVertical }">
-    <ul class="menulist" :class="{ vertical: isVertical }">
-      <li class="menulist__item" :class="{ vertical: isVertical }" v-for="item in item" :key="item.id">
-        <router-link
-          class="menulist__link"
-          :class="{ vertical: isVertical }"
-          :to="item.link"
+  <div class="menulist__wrapper" :class="typeOfMenu">
+    <ul class="menulist" :class="typeOfMenu">
+      <li
+        class="menulist__item"
+        :class="typeOfMenu"
+        v-for="item in item"
+        :key="item.id"
+      >
+        <router-link class="menulist__link" :class="typeOfMenu" :to="item.link"
           >{{ item.name }}
         </router-link>
-        <span
-          v-if="hasTotal"
-          class="menulist__total"
-          :class="{ vertical: isVertical }"
-          >{{ item.total }}</span
-        >
+        <span v-if="hasTotal" class="menulist__total" :class="typeOfMenu">{{
+          item.total
+        }}</span>
       </li>
       <slot></slot>
     </ul>
@@ -34,6 +33,13 @@ export default {
     hasTotal: {
       type: Boolean,
       default: false,
+    },
+    typeOfMenu: {
+      type: String,
+      default: "default",
+      validator(v) {
+        return ["default", "vertical", "mobile"].includes(v);
+      },
     },
   },
 };

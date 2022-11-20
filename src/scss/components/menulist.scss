@@ -29,7 +29,8 @@
       }
     }
 
-    &.vertical {
+    &.vertical,
+    &.mobile {
       margin: 0;
     }
     @include until(1200px) {
@@ -55,7 +56,8 @@
       }
     }
 
-    &.vertical {
+    &.vertical,
+    &.mobile {
       text-decoration: underline;
       text-transform: none;
       font-size: 2rem;
@@ -66,10 +68,15 @@
         color: $accent-hover;
       }
     }
+
+    &.mobile{
+      color: $light-1;
+    }
   }
 
   &__total {
-    &.vertical {
+    &.vertical,
+    &.mobile {
       font-size: 2rem;
       color: $light-1;
       text-decoration: none;
@@ -87,9 +94,23 @@
       align-items: flex-start;
       justify-content: center;
     }
+
+    &.mobile {
+      background-color: $dark-4;
+      align-items: flex-start;
+      justify-content: center;
+      position: absolute;
+      top: 14.8rem;
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+      z-index: 10;
+    }
   }
 
-  &.vertical {
+  &.vertical,
+  &.mobile {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;

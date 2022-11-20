@@ -63,6 +63,7 @@ h3 {
   width: 100%;
   min-width: 32rem;
   flex-wrap: wrap;
+  position: relative;
   @include until(1420px) {
     overflow: hidden;
   }
