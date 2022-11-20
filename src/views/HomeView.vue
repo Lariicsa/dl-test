@@ -6,7 +6,7 @@
       >
     </HeaderVue>
     <div class="container__main">
-      <div class="sidebar">
+      <div class="sidebar" :style="`display:${isOpenMenu ? 'flex' : 'none'}`">
         <MenuList
           :item="formattedPositions"
           :isVertical="true"
@@ -69,13 +69,14 @@ export default {
       breakPointMobile: 1024,
       cardsData: DATA.cardsData,
       positions: DATA.positionsData,
-
+      isOpenMenu: false,
     };
   },
 
   methods: {
     openMenu() {
-      console.log("clic");
+      this.isOpenMenu = !this.isOpenMenu;
+      console.log('clic');
     },
   },
 

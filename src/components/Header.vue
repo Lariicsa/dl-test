@@ -28,8 +28,6 @@ export default {
   methods: {
     activeBurgerButton() {
       this.$emit("activeBurgerButton");
-      // this.isOpen = !this.isOpen;
-      // console.log('clic');
     },
   },
 };
