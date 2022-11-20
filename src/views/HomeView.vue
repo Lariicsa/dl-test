@@ -14,6 +14,9 @@
 
       <div class="container__inner">
         <div class="row">
+          <ButtonVue buttonClass="dropdown">List</ButtonVue>
+        </div>
+        <div class="row">
           <h2>Latest updates</h2>
           <GridVue
             columns="1fr 1fr 1fr"

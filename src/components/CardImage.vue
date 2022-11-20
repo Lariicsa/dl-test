@@ -2,7 +2,9 @@
   <div class="cardimage">
     <div
       class="cardimage__image"
-      :style="`background-image: url(${item.image})`"
+      :style="`background-image: url(${
+        item.image != undefined ? item.imag : ''
+      })`"
       :class="{ isnew: item.isNew }"
     >
       <div class="cardimage__play"></div>

@@ -153,6 +153,9 @@
   } @else if($type == "secondary") {
     background-color: $primary-2;
     color: $dark-1;
+  }@else if($type == 'dropdown'){
+    background-color: $dark-4;
+    color: $light-1;
   }
 
   &:hover {

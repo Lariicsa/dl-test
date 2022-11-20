@@ -16,11 +16,18 @@
     @include button(17.6rem, "default");
 
     @include until(1024px) {
-     background-color: $primary-2
+      background-color: $primary-2;
     }
   }
+
   &__secondary {
     @extend .button;
     @include button(17.6rem, "secondary");
+  }
+
+  &__dropdown {
+    @extend .button;
+    
+    @include button(100%, "dropdown");
   }
 }

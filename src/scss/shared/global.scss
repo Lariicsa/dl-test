@@ -35,6 +35,9 @@ h2 {
   font-size: $regular-title-size;
   line-height: $big-title-size;
   font-weight: $regular;
+  @include until(1024px){
+    font-size: 2.6rem;
+  }
 }
 h3 {
   font-size: $small-title-size;
