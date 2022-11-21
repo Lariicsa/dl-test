@@ -106,12 +106,12 @@
   }
 
   &__ribbon {
-    background-color: tomato;
+    background-color: $rush;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     width: 13rem;
     height: 2.8rem;
     transform: rotate(-45deg);

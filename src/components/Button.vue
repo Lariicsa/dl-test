@@ -4,6 +4,7 @@
     :style="`margin:${margin};`"
     @click="click"
   >
+    <i class="button__icon" v-if="buttonClass === 'dropdown'">v</i>
     <slot></slot>
   </button>
 </template>

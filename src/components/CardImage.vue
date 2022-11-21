@@ -3,7 +3,7 @@
     <div
       class="cardimage__image"
       :style="`background-image: url(${
-        item.image != undefined ? item.imag : ''
+        item.image != undefined ? item.image : ''
       })`"
     >
       <span v-if="item.isNew" class="cardimage__ribbon">New</span>

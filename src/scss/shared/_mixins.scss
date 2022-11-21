@@ -32,6 +32,8 @@
     background-image: url("data:image/svg+xml,%3Csvg width='34' height='35' viewBox='0 0 34 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.751587 34.5882V0.411743L33.3006 17.5L0.751587 34.5882Z' fill='" + $varcolor + "'/%3E%3C/svg%3E%0A");
   } @else if ($name == "cross") {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='39.998' viewBox='0 0 40 39.998'%3E%3Cg id='close' transform='translate(0 -0.359)'%3E%3Cpath id='Trazado_9' data-name='Trazado 9' d='M38.974,32.733,7.626,1.385a3.5,3.5,0,0,0-4.949,0L1.025,3.034a3.5,3.5,0,0,0,0,4.949L32.373,39.332a3.5,3.5,0,0,0,4.949,0l1.65-1.65A3.5,3.5,0,0,0,38.974,32.733Zm0,0' transform='translate(0 0)' fill='" + $varcolor + "'/%3E%3Cpath id='Trazado_10' data-name='Trazado 10' d='M32.373,1.387,1.025,32.735a3.5,3.5,0,0,0,0,4.949l1.65,1.65a3.5,3.5,0,0,0,4.949,0L38.974,7.988a3.5,3.5,0,0,0,0-4.949l-1.65-1.65A3.5,3.5,0,0,0,32.373,1.387Zm0,0' transform='translate(0 -0.002)' fill='" + $varcolor + "'/%3E%3C/g%3E%3C/svg%3E%0A");
+  } @else if ($name == "arrow-down"){
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='13' viewBox='0 0 23 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 1.85843C23 2.33358 22.8128 2.80897 22.4385 3.17108L12.8551 12.456C12.1064 13.1813 10.8936 13.1813 10.1449 12.456L0.561523 3.17108C-0.187175 2.4457 -0.187175 1.27058 0.561523 0.545197C1.31022 -0.180184 2.52311 -0.180184 3.27181 0.545197L11.5 8.51743L19.7297 0.544037C20.4784 -0.181345 21.6913 -0.181345 22.44 0.544037C22.8143 0.906727 23 1.38258 23 1.85843Z' fill='" + $varcolor + "'/%3E%3C/svg%3E%0A");
   }
 }
 
@@ -155,8 +157,9 @@
     background-color: $primary-2;
     color: $dark-1;
   } @else if($type == "dropdown") {
-    background-color: $dark-4;
+    background-color: $dark-3;
     color: $light-1;
+    height: 4.8rem;
   }
 
   &:hover {

@@ -27,7 +27,23 @@
 
   &__dropdown {
     @extend .button;
-    
     @include button(100%, "dropdown");
+    text-align: left;
+    align-items: flex-start;
+    &:hover {
+      background-color: $dark-3;
+    }
+    &:active {
+      background-color: $dark-2;
+    }
+  }
+
+  &__icon {
+    @include icon("arrow-down", $dark-4);
+    width: 2.4rem;
+    height: 1.4rem;
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
   }
 }

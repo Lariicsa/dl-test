@@ -163,6 +163,13 @@ h3 {
   }
 }
 
+.positions {
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+
 [v-cloak] {
   display: none;
 }

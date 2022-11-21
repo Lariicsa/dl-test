@@ -1,6 +1,6 @@
 <template>
   <div class="container__out">
-    <HeaderVue @activeBurgerButton="openMenu">
+    <HeaderVue>
       <MenuList :item="topMenu">
         <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList
       >
@@ -21,8 +21,10 @@
       </div>
 
       <div class="container__inner">
-        <div class="row">
-          <ButtonVue buttonClass="dropdown">List</ButtonVue>
+        <div class="row positions">
+          <ButtonVue buttonClass="dropdown" @click="openPositionsMenu"
+            >Positions</ButtonVue
+          >
         </div>
         <div class="row">
           <h2>Latest updates</h2>
@@ -80,9 +82,8 @@ export default {
   },
 
   methods: {
-    openMenu() {
+    openPositionsMenu() {
       this.isOpenMenu = !this.isOpenMenu;
-      console.log("clic");
     },
   },
 
