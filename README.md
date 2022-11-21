@@ -5,6 +5,15 @@
 npm install
 ```
 
+> if it requires:
+
+### Instal vue cli library
+```
+npm i -g @vue/cli
+vue add babel
+npm install
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -15,10 +24,3 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
