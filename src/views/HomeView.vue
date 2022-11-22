@@ -15,7 +15,7 @@
         :hasFinder="true"
       >
         <template v-slot:finder>
-          
+          <InputField></InputField>
         </template>
       </MenuList>
     </HeaderVue>
