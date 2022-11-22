@@ -15,7 +15,7 @@
         :hasFinder="true"
       >
         <template v-slot:finder>
-          <InputField></InputField>
+          <InputField placeholder="Search positions"></InputField>
         </template>
       </MenuList>
     </HeaderVue>
