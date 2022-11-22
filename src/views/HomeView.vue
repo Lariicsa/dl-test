@@ -2,14 +2,22 @@
   <div class="container__out">
     <HeaderVue>
       <MenuList :item="topMenu">
-        <ButtonVue buttonClass="default">SYNC NOW</ButtonVue></MenuList
+        <template v-slot:end>
+          <ButtonVue buttonClass="default">SYNC NOW</ButtonVue>
+        </template></MenuList
       >
+
       <MenuList
         :style="`display:${isOpenMenu ? 'flex' : 'none'}`"
         :item="formattedPositions"
         typeOfMenu="mobile"
         :hasTotal="true"
-      />
+        :hasFinder="true"
+      >
+        <template v-slot:finder>
+          
+        </template>
+      </MenuList>
     </HeaderVue>
     <div class="container__main">
       <div class="sidebar">
@@ -47,8 +55,10 @@
 </template>
 
 <script>
+/*eslint-disable */
 import ButtonVue from "@/components/Button";
 import CardImage from "@/components/CardImage";
+import InputField from "@/components/Inputfield";
 import GridVue from "@/components/Grid";
 import HeaderVue from "@/components/Header";
 import MenuList from "@/components/MenuList";
@@ -59,6 +69,7 @@ export default {
   components: {
     ButtonVue,
     CardImage,
+    InputField,
     GridVue,
     HeaderVue,
     MenuList,
